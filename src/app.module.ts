@@ -5,10 +5,15 @@ import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    //* Envs configuration
     ConfigModule.forRoot({
       envFilePath: '.env.dev',
     }),
+
+    //* Mongo connection
     MongooseModule.forRoot(process.env.MONGO_DATABASE),
+
+    //* Modules imported
     UsersModule,
   ],
 })
