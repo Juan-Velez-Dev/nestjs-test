@@ -8,6 +8,7 @@ async function bootstrap() {
 
   //* Swagger configuration
   const config = new DocumentBuilder()
+    .addBearerAuth() // implementa la autenticacion en swagger
     .setTitle('Course Nestjs')
     .setDescription('This is for practice Nestjs')
     .setVersion('1.0')

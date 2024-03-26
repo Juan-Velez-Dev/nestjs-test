@@ -11,16 +11,14 @@ export class Users {
   firstName: string;
   @Prop({ maxlength: 20 })
   lastName: string;
-  @Prop({ required: true, unique: true })
+  @Prop({ required: false, unique: false })
   email: string;
-  @Prop({ required: false })
+  @Prop({ required: true })
   password: string;
   @Prop()
   age: number;
   @Prop({ default: 'user', required: false })
   role: string;
-  @Prop({ default: false, required: false })
-  active: boolean;
 }
 
 export const UsersSchema = SchemaFactory.createForClass(Users);
